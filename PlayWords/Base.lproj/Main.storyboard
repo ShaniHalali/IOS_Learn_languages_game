@@ -1,24 +1,1260 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FVH-hz-cY0">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Review-->
+        <scene sceneID="S4B-hl-Vwn">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="a5C-Cj-beg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ect-gN-B8u">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BACK" translatesAutoresizingMaskIntoConstraints="NO" id="K9G-MQ-X2i">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yq4-hB-ueZ">
+                                <rect key="frame" x="16" y="50" width="361" height="719"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Olg-qs-PMu">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="4tZ-H6-GjR">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="4tZ-H6-GjR"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="4tZ-H6-GjR"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="4tZ-H6-GjR"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTC-mF-F9J">
+                                        <rect key="frame" x="0.0" y="30" width="361" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="EAi-bg-qjY">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="30"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="35"/>
+                                            <mask key="constraints">
+                                                <include reference="EAi-bg-qjY"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trofhy" translatesAutoresizingMaskIntoConstraints="NO" id="SzH-Tu-3a3">
+                                        <rect key="frame" x="0.0" y="80" width="361" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="AlR-LO-a4x">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="80"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="AlR-LO-a4x"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjj-9I-Ib6">
+                                        <rect key="frame" x="0.0" y="180" width="361" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="IZw-Hf-VPn">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="30"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                            <mask key="constraints">
+                                                <include reference="IZw-Hf-VPn"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="In0-aP-Ef6">
+                                        <rect key="frame" x="0.0" y="220" width="361" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="ZyL-5m-8TD">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="40"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="ZyL-5m-8TD"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="feT-YG-MhX">
+                                        <rect key="frame" x="0.0" y="270" width="361" height="50"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ebq-iz-RRS">
+                                                <rect key="frame" x="0.0" y="0.0" width="120.33333333333333" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIs-FU-f37">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120.33333333333333" height="50"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                                        </variation>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSO-QC-zIf">
+                                                <rect key="frame" x="120.33333333333334" y="0.0" width="120.33333333333334" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFh-eV-GzB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120.33333333333333" height="50"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                                        </variation>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BE1-VR-VRC">
+                                                <rect key="frame" x="240.66666666666674" y="0.0" width="120.33333333333334" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqF-Va-6Fj">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120.33333333333333" height="50"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact-widthClass=regular">
+                                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                                        </variation>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="r2i-9b-Ya0">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="35"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="r2i-9b-Ya0"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="H0z-T9-ZmA">
+                                        <rect key="frame" x="0.0" y="320" width="361" height="399"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Md3-t0-Eqw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yq4-hB-ueZ" firstAttribute="leading" secondItem="Md3-t0-Eqw" secondAttribute="leading" constant="50" id="7Ch-Qe-7ZH">
+                                <variation key="heightClass=compact-widthClass=regular" constant="50"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="16"/>
+                            </constraint>
+                            <constraint firstItem="yq4-hB-ueZ" firstAttribute="top" secondItem="ect-gN-B8u" secondAttribute="top" constant="50" id="8ng-uu-Lp2">
+                                <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="Md3-t0-Eqw" firstAttribute="trailing" secondItem="yq4-hB-ueZ" secondAttribute="trailing" constant="16" id="9XE-VS-GMw"/>
+                            <constraint firstAttribute="trailing" secondItem="K9G-MQ-X2i" secondAttribute="trailing" id="Qvc-un-fXN"/>
+                            <constraint firstItem="K9G-MQ-X2i" firstAttribute="top" secondItem="ect-gN-B8u" secondAttribute="top" id="meE-Kl-J8w"/>
+                            <constraint firstItem="Md3-t0-Eqw" firstAttribute="bottom" secondItem="K9G-MQ-X2i" secondAttribute="bottom" id="svw-vI-QNV"/>
+                            <constraint firstItem="K9G-MQ-X2i" firstAttribute="leading" secondItem="ect-gN-B8u" secondAttribute="leading" id="uJB-Qe-ae5"/>
+                            <constraint firstItem="Md3-t0-Eqw" firstAttribute="bottom" secondItem="yq4-hB-ueZ" secondAttribute="bottom" id="vC8-bO-gtJ"/>
+                        </constraints>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="7Ch-Qe-7ZH"/>
+                                <include reference="8ng-uu-Lp2"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="7Ch-Qe-7ZH"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Review" image="trophy.fill" catalog="system" id="URe-CH-4an"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p0O-HT-gdZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-164.12213740458014" y="-302.11267605633805"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="x2Z-5X-erD">
+            <objects>
+                <viewController id="fIH-0j-1EV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M31-M9-96b">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameback" translatesAutoresizingMaskIntoConstraints="NO" id="rDl-2R-KAi">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vqQ-UR-x4D">
+                                <rect key="frame" x="50" y="150" width="293" height="433"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QwC-Ui-mNd">
+                                        <rect key="frame" x="0.0" y="0.0" width="293" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="ssm-i0-IpA">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="ssm-i0-IpA"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boybook" translatesAutoresizingMaskIntoConstraints="NO" id="RJ8-xz-6ef">
+                                        <rect key="frame" x="0.0" y="50" width="293" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="zg8-mw-uYH">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="150"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="zg8-mw-uYH"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eG-Nh-POg">
+                                        <rect key="frame" x="0.0" y="200" width="293" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="d4C-Qv-QYI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מילה" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRw-a1-9tz">
+                                        <rect key="frame" x="0.0" y="240" width="293" height="28.666666666666686"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YT2-R6-Uml">
+                                        <rect key="frame" x="0.0" y="268.66666666666669" width="293" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="cMH-H0-TmE">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="cMH-H0-TmE"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="cMH-H0-TmE"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="BnN-dT-gYT">
+                                        <rect key="frame" x="0.0" y="298.66666666666669" width="293" height="34.333333333333314"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UWm-SL-80f">
+                                                <rect key="frame" x="0.0" y="0.0" width="126.66666666666667" height="34.333333333333336"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRG-St-zxb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="126.66666666666667" height="34.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="wrong">
+                                                            <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="f0A-zn-kjJ">
+                                                <rect key="frame" x="166.66666666666666" y="0.0" width="126.33333333333334" height="34.333333333333336"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTU-vJ-Qun">
+                                                        <rect key="frame" x="0.0" y="0.0" width="126.33333333333333" height="34.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="correct"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="Tdp-4S-Az0">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="250"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Tdp-4S-Az0"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <exclude reference="Tdp-4S-Az0"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="F5q-bc-6lu">
+                                        <rect key="frame" x="0.0" y="333" width="293" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="2lb-2i-gQB">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="100"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="2lb-2i-gQB"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="BnN-dT-gYT" firstAttribute="top" secondItem="YT2-R6-Uml" secondAttribute="bottom" id="3bY-sY-TV6"/>
+                                    <constraint firstAttribute="trailing" secondItem="BnN-dT-gYT" secondAttribute="trailing" constant="5" id="9qE-23-VzQ"/>
+                                    <constraint firstItem="BnN-dT-gYT" firstAttribute="leading" secondItem="vqQ-UR-x4D" secondAttribute="leading" constant="5" id="iMo-0Y-IXO"/>
+                                    <constraint firstItem="F5q-bc-6lu" firstAttribute="top" secondItem="BnN-dT-gYT" secondAttribute="bottom" id="p74-D4-7Rb"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9qE-23-VzQ"/>
+                                        <exclude reference="iMo-0Y-IXO"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score: 100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rZ-Pq-xaQ">
+                                <rect key="frame" x="50" y="1" width="243" height="182"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="b3I-bC-Hrk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2rZ-Pq-xaQ" firstAttribute="leading" secondItem="b3I-bC-Hrk" secondAttribute="leading" constant="150" id="0aT-Se-InI">
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="vqQ-UR-x4D" firstAttribute="leading" secondItem="b3I-bC-Hrk" secondAttribute="leading" constant="150" id="87A-ua-5EV">
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="rDl-2R-KAi" firstAttribute="leading" secondItem="M31-M9-96b" secondAttribute="leading" id="O2F-eV-G3V"/>
+                            <constraint firstItem="2rZ-Pq-xaQ" firstAttribute="top" secondItem="M31-M9-96b" secondAttribute="top" constant="1" id="Xkg-UW-Uns"/>
+                            <constraint firstItem="vqQ-UR-x4D" firstAttribute="top" secondItem="M31-M9-96b" secondAttribute="top" constant="50" id="ejx-on-gZE">
+                                <variation key="heightClass=regular-widthClass=compact" constant="150"/>
+                            </constraint>
+                            <constraint firstAttribute="bottom" secondItem="rDl-2R-KAi" secondAttribute="bottom" id="hup-TG-ezy"/>
+                            <constraint firstItem="b3I-bC-Hrk" firstAttribute="trailing" secondItem="vqQ-UR-x4D" secondAttribute="trailing" constant="150" id="jI4-jn-5o3">
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint firstAttribute="bottom" secondItem="vqQ-UR-x4D" secondAttribute="bottom" constant="50" id="kJ2-9u-1dy">
+                                <variation key="heightClass=regular-widthClass=compact" constant="200"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="rDl-2R-KAi" secondAttribute="trailing" id="kpL-zN-BGo"/>
+                            <constraint firstAttribute="bottom" secondItem="2rZ-Pq-xaQ" secondAttribute="bottom" constant="335" id="mHv-Xa-I3w">
+                                <variation key="heightClass=regular-widthClass=compact" constant="600"/>
+                            </constraint>
+                            <constraint firstItem="rDl-2R-KAi" firstAttribute="top" secondItem="M31-M9-96b" secondAttribute="top" id="uJp-Gy-n15"/>
+                            <constraint firstAttribute="trailing" secondItem="2rZ-Pq-xaQ" secondAttribute="trailing" constant="100" id="ziS-dl-cIy"/>
+                        </constraints>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="jI4-jn-5o3"/>
+                                <include reference="mHv-Xa-I3w"/>
+                                <include reference="0aT-Se-InI"/>
+                                <include reference="87A-ua-5EV"/>
+                                <include reference="ejx-on-gZE"/>
+                                <include reference="kJ2-9u-1dy"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="NF9-MC-mLc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ka5-gl-rdj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-151.40845070422537" y="614.50381679389307"/>
+        </scene>
+        <!--profile-->
+        <scene sceneID="Aeq-U9-ZmY">
+            <objects>
+                <viewController id="LRU-fC-D06" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7m6-c2-aB6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BACK" translatesAutoresizingMaskIntoConstraints="NO" id="yoZ-Zx-mFW">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HHy-kG-cPv">
+                                <rect key="frame" x="16" y="50" width="361" height="511"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SA9-3B-8fC">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="hI2-kb-Ml5">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="hI2-kb-Ml5"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="hI2-kb-Ml5"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="hI2-kb-Ml5"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJc-Hr-sSP">
+                                        <rect key="frame" x="0.0" y="30" width="361" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="psW-J0-9ea">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="40"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="55"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
+                                            <mask key="constraints">
+                                                <include reference="psW-J0-9ea"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="psW-J0-9ea"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vcc-Vu-GIa">
+                                        <rect key="frame" x="0.0" y="85" width="361" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="gnY-VI-sjP">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="gnY-VI-sjP"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email:" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZSx-8P-0BD">
+                                        <rect key="frame" x="0.0" y="125" width="361" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Js4-qc-9p9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name:" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g17-uP-R2c">
+                                        <rect key="frame" x="0.0" y="165" width="361" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ZbI-uX-Mph"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vs0-60-pzM">
+                                        <rect key="frame" x="0.0" y="205" width="361" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="PVb-3l-qT4">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="PVb-3l-qT4"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learning Lenguage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSp-oZ-ktD">
+                                        <rect key="frame" x="0.0" y="245" width="361" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="IPK-Ge-SLv">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="30"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                            <mask key="constraints">
+                                                <include reference="IPK-Ge-SLv"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="IPK-Ge-SLv"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Emm-tL-sEH">
+                                        <rect key="frame" x="0.0" y="285" width="361" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="ttg-9l-GMJ">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="ttg-9l-GMJ"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="STG-IS-WN6">
+                                        <rect key="frame" x="0.0" y="305" width="361" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="O1O-Va-x1r">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="40"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                            </constraint>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="O1O-Va-x1r"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="O1O-Va-x1r"/>
+                                            </mask>
+                                        </variation>
+                                    </segmentedControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AbO-5B-QFK">
+                                        <rect key="frame" x="0.0" y="355" width="361" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="vfB-k9-6C9">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="vfB-k9-6C9"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="vfB-k9-6C9"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="vfB-k9-6C9"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yW-Lr-LMZ">
+                                        <rect key="frame" x="0.0" y="395" width="361" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="58X-09-uVG">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="30"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                            <mask key="constraints">
+                                                <include reference="58X-09-uVG"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="58X-09-uVG"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IEE-dL-GDN">
+                                        <rect key="frame" x="0.0" y="445" width="361" height="66"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YSJ-Pw-Tmb">
+                                                <rect key="frame" x="0.0" y="0.0" width="120.33333333333333" height="66"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xg0-XT-DhD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120.33333333333333" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="r5E-as-ZiE">
+                                                                <variation key="heightClass=compact-widthClass=regular" constant="25"/>
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="35"/>
+                                                            </constraint>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                            <mask key="constraints">
+                                                                <include reference="r5E-as-ZiE"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <mask key="constraints">
+                                                                <include reference="r5E-as-ZiE"/>
+                                                            </mask>
+                                                        </variation>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HFz-9x-ErC">
+                                                        <rect key="frame" x="0.0" y="35" width="122.33333333333333" height="31"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="31" id="1J7-0Z-Wuk"/>
+                                                        </constraints>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fF0-VL-tKm">
+                                                <rect key="frame" x="120.33333333333334" y="0.0" width="120.33333333333334" height="66"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpN-xh-whI">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120.33333333333333" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="0z5-j3-p8j">
+                                                                <variation key="heightClass=compact-widthClass=regular" constant="25"/>
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="35"/>
+                                                            </constraint>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                            <mask key="constraints">
+                                                                <include reference="0z5-j3-p8j"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <mask key="constraints">
+                                                                <include reference="0z5-j3-p8j"/>
+                                                            </mask>
+                                                        </variation>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ldn-JC-Vk6">
+                                                        <rect key="frame" x="0.0" y="35" width="122.33333333333333" height="31"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="31" id="hjI-i7-d8b"/>
+                                                        </constraints>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7OX-jD-R9h">
+                                                <rect key="frame" x="240.66666666666674" y="0.0" width="120.33333333333334" height="66"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hard" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59g-5W-6J0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="120.33333333333333" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="GwL-BM-gR4">
+                                                                <variation key="heightClass=compact-widthClass=regular" constant="25"/>
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="35"/>
+                                                            </constraint>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                            <mask key="constraints">
+                                                                <include reference="GwL-BM-gR4"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
+                                                            <mask key="constraints">
+                                                                <include reference="GwL-BM-gR4"/>
+                                                            </mask>
+                                                        </variation>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kmd-6B-lje">
+                                                        <rect key="frame" x="0.0" y="35" width="122.33333333333333" height="31"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="31" id="22N-M4-ybH"/>
+                                                        </constraints>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="O15-Zz-3lk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yoZ-Zx-mFW" secondAttribute="trailing" id="5Qz-J0-2Xv"/>
+                            <constraint firstItem="O15-Zz-3lk" firstAttribute="bottom" secondItem="HHy-kG-cPv" secondAttribute="bottom" constant="51" id="6TK-6D-b92">
+                                <variation key="heightClass=compact-widthClass=regular" constant="51"/>
+                            </constraint>
+                            <constraint firstItem="HHy-kG-cPv" firstAttribute="top" secondItem="7m6-c2-aB6" secondAttribute="top" constant="10" id="F6c-yY-QoZ">
+                                <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="yoZ-Zx-mFW" firstAttribute="top" secondItem="7m6-c2-aB6" secondAttribute="top" id="HFk-Km-eIe"/>
+                            <constraint firstItem="O15-Zz-3lk" firstAttribute="trailing" secondItem="HHy-kG-cPv" secondAttribute="trailing" constant="16" id="dGg-OF-BuT"/>
+                            <constraint firstItem="yoZ-Zx-mFW" firstAttribute="leading" secondItem="7m6-c2-aB6" secondAttribute="leading" id="ddw-3G-gYD"/>
+                            <constraint firstItem="HHy-kG-cPv" firstAttribute="leading" secondItem="O15-Zz-3lk" secondAttribute="leading" constant="16" id="hKv-q7-98Q">
+                                <variation key="heightClass=compact-widthClass=regular" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="O15-Zz-3lk" firstAttribute="bottom" secondItem="yoZ-Zx-mFW" secondAttribute="bottom" id="wJY-0I-clS"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6TK-6D-b92"/>
+                                <exclude reference="F6c-yY-QoZ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="6TK-6D-b92"/>
+                                <include reference="F6c-yY-QoZ"/>
+                                <include reference="hKv-q7-98Q"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="F6c-yY-QoZ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="profile" image="person.crop.square.fill" catalog="system" id="YZN-LI-jTM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rXc-Sf-Hmh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2813" y="458"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="z2f-7e-8yy">
+            <objects>
+                <viewController id="i9a-lf-6cp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Slk-Ws-kFJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BACK" translatesAutoresizingMaskIntoConstraints="NO" id="Dvi-ea-dCz">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="c3G-pO-Gl6">
+                                <rect key="frame" x="16" y="50" width="361" height="719"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hwI-8b-Zae">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="umD-tm-fpq">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="15"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="umD-tm-fpq"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="umD-tm-fpq"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="umD-tm-fpq"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ru1-he-utW">
+                                        <rect key="frame" x="0.0" y="80" width="361" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="PER-qU-BX4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="50"/>
+                                        </variation>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zQ5-zt-EK2">
+                                        <rect key="frame" x="0.0" y="120" width="361" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="ZuE-Je-ty9">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="ZuE-Je-ty9"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name: Shani" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U3i-QR-Zg6">
+                                        <rect key="frame" x="0.0" y="170" width="361" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Vyp-om-ICd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email: shanihlli1234@gmail.com" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lbJ-pf-FtQ">
+                                        <rect key="frame" x="0.0" y="200" width="361" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="AoS-Bq-2hV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uoq-BA-vIc">
+                                        <rect key="frame" x="0.0" y="230" width="361" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="OAk-QY-511">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="OAk-QY-511"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learning Language" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Lg-Oa-gLe">
+                                        <rect key="frame" x="0.0" y="280" width="361" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="NdS-ln-phj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fPf-ny-rJD">
+                                        <rect key="frame" x="0.0" y="310" width="361" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="fo9-vX-0Aa"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="K3j-J0-OTk">
+                                        <rect key="frame" x="0.0" y="350" width="361" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="hcF-5o-bfl">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="hcF-5o-bfl"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQ8-RY-nGC">
+                                        <rect key="frame" x="0.0" y="390" width="361" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="QXd-PL-LiQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aCg-bF-Gcz">
+                                        <rect key="frame" x="0.0" y="420" width="361" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="Udi-tc-xAI">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Udi-tc-xAI"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Udi-tc-xAI"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="NUD-tn-gda">
+                                        <rect key="frame" x="0.0" y="430" width="361" height="249"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="c6j-wO-IaB">
+                                                <rect key="frame" x="0.0" y="0.0" width="120.33333333333333" height="249"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Easy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l11-aF-AAv">
+                                                        <rect key="frame" x="29.333333333333336" y="0.0" width="62.000000000000007" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="E70-sZ-V2P"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vSw-YA-ufE">
+                                                        <rect key="frame" x="35.666666666666664" y="30" width="51" height="219"/>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="M7j-IQ-Fv5">
+                                                <rect key="frame" x="120.33333333333334" y="0.0" width="120.33333333333334" height="249"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MId" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJf-jx-0e9">
+                                                        <rect key="frame" x="35.333333333333314" y="0.0" width="49.666666666666657" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="FeA-LB-RpM"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NQw-tJ-mtG">
+                                                        <rect key="frame" x="35.666666666666657" y="30" width="51" height="219"/>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="A3b-kW-JV3">
+                                                <rect key="frame" x="240.66666666666671" y="0.0" width="120.33333333333334" height="249"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKL-NK-WaZ">
+                                                        <rect key="frame" x="38.666666666666629" y="0.0" width="43" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="KAS-mF-jhq"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eev-Jw-fA6">
+                                                        <rect key="frame" x="35.666666666666629" y="30" width="51" height="219"/>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ShD-gX-wYZ">
+                                        <rect key="frame" x="0.0" y="679" width="361" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="4vp-Ma-VYq"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="F8e-lE-pWR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F8e-lE-pWR" firstAttribute="trailing" secondItem="c3G-pO-Gl6" secondAttribute="trailing" constant="16" id="2Lb-bM-SXo"/>
+                            <constraint firstItem="F8e-lE-pWR" firstAttribute="bottom" secondItem="c3G-pO-Gl6" secondAttribute="bottom" id="Bno-3q-Iib"/>
+                            <constraint firstItem="c3G-pO-Gl6" firstAttribute="leading" secondItem="F8e-lE-pWR" secondAttribute="leading" constant="16" id="GzY-im-HgW">
+                                <variation key="heightClass=compact-widthClass=regular" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="F8e-lE-pWR" firstAttribute="bottom" secondItem="Dvi-ea-dCz" secondAttribute="bottom" id="cxa-cl-GYO"/>
+                            <constraint firstAttribute="trailing" secondItem="Dvi-ea-dCz" secondAttribute="trailing" id="hLN-mf-G8h"/>
+                            <constraint firstItem="Dvi-ea-dCz" firstAttribute="top" secondItem="Slk-Ws-kFJ" secondAttribute="top" id="htI-zd-bes"/>
+                            <constraint firstItem="c3G-pO-Gl6" firstAttribute="top" secondItem="Slk-Ws-kFJ" secondAttribute="top" id="qge-Cp-4xv">
+                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="Dvi-ea-dCz" firstAttribute="leading" secondItem="Slk-Ws-kFJ" secondAttribute="leading" id="wq2-Gy-j45"/>
+                        </constraints>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="GzY-im-HgW"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="qge-Cp-4xv"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="7ij-vf-Zxk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iEc-t7-FGl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1520" y="-304"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="mSV-sT-LgO">
+            <objects>
+                <viewController id="Lq0-T6-6nJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fNY-AR-N8k">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BACK" translatesAutoresizingMaskIntoConstraints="NO" id="vq4-FG-Fpw">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Bgq-j3-bKj">
+                                <rect key="frame" x="16" y="50" width="361" height="719"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KO9-QT-tts">
+                                        <rect key="frame" x="125.66666666666666" y="0.0" width="110" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="WxZ-sd-2Q8">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="WxZ-sd-2Q8"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <exclude reference="WxZ-sd-2Q8"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="WxZ-sd-2Q8"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🏆 : 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2V8-TV-eak">
+                                        <rect key="frame" x="120.33333333333334" y="50" width="120.66666666666666" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="IMS-NE-1ca"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="40"/>
+                                        </variation>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DMU-OX-AMU">
+                                        <rect key="frame" x="125.66666666666666" y="110" width="110" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="KfY-FJ-zne">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="KfY-FJ-zne"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="KfY-FJ-zne"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn Languges" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ti6-6k-NIT">
+                                        <rect key="frame" x="19.666666666666657" y="140" width="322" height="40"/>
+                                        <color key="tintColor" red="0.41436323330000002" green="0.78039215689999997" blue="0.73286135240000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="AFA-Mw-AvS"/>
+                                            <constraint firstAttribute="width" constant="322" id="kZ9-pn-j7d"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter-Bold" family="American Typewriter" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LR3-Wo-WP2">
+                                        <rect key="frame" x="125.66666666666666" y="180" width="110" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="lHv-6V-Ky4">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="lHv-6V-Ky4"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="children2" translatesAutoresizingMaskIntoConstraints="NO" id="QeL-tn-1mc">
+                                        <rect key="frame" x="0.0" y="220" width="361" height="264"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="162" id="ZQv-Ce-6jo">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="162"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="ZQv-Ce-6jo"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="ZQv-Ce-6jo"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <exclude reference="ZQv-Ce-6jo"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4U0-ig-Lib">
+                                        <rect key="frame" x="80.666666666666686" y="484" width="200" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="0bt-G5-ZoU"/>
+                                            <constraint firstAttribute="height" constant="35" id="hhI-Hi-1sW"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Start Learning">
+                                            <color key="baseForegroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="fIH-0j-1EV" kind="show" id="7fR-ad-qrm"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TAj-03-W7Z">
+                                        <rect key="frame" x="125.66666666666666" y="519" width="110" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="Q6c-1G-OfP">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="30"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="200"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Q6c-1G-OfP"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="Q6c-1G-OfP"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Q6c-1G-OfP"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ls9-an-dwn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bgq-j3-bKj" firstAttribute="top" secondItem="fNY-AR-N8k" secondAttribute="top" constant="50" id="8Lt-aZ-4YN">
+                                <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="Bgq-j3-bKj" firstAttribute="leading" secondItem="fNY-AR-N8k" secondAttribute="leading" constant="16" id="Q2L-t5-DsW">
+                                <variation key="heightClass=compact-widthClass=regular" constant="50"/>
+                            </constraint>
+                            <constraint firstItem="ls9-an-dwn" firstAttribute="bottom" secondItem="vq4-FG-Fpw" secondAttribute="bottom" id="SdZ-Dq-KGm">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="Bgq-j3-bKj" secondAttribute="trailing" constant="16" id="Ye4-ai-Gzc"/>
+                            <constraint firstItem="vq4-FG-Fpw" firstAttribute="top" secondItem="fNY-AR-N8k" secondAttribute="top" id="eQf-04-wAu"/>
+                            <constraint firstAttribute="trailing" secondItem="vq4-FG-Fpw" secondAttribute="trailing" id="ehk-sA-2XR"/>
+                            <constraint firstItem="ls9-an-dwn" firstAttribute="bottom" secondItem="Bgq-j3-bKj" secondAttribute="bottom" id="iBb-xk-gZk">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="vq4-FG-Fpw" firstAttribute="leading" secondItem="fNY-AR-N8k" secondAttribute="leading" id="v58-gd-M4B"/>
+                        </constraints>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="8Lt-aZ-4YN"/>
+                                <include reference="Q2L-t5-DsW"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="SdZ-Dq-KGm"/>
+                                <include reference="iBb-xk-gZk"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="k54-oa-egV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r2a-dR-js6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-811" y="-254"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="PWM-KM-tM7">
+            <objects>
+                <tabBarController id="FVH-hz-cY0" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WI3-bQ-5ui">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Lq0-T6-6nJ" kind="relationship" relationship="viewControllers" id="Hpf-o4-iRu"/>
+                        <segue destination="a5C-Cj-beg" kind="relationship" relationship="viewControllers" id="2yg-7J-MTA"/>
+                        <segue destination="i9a-lf-6cp" kind="relationship" relationship="viewControllers" id="4fa-vj-Axb"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NHk-tW-8Em" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-879" y="1039"/>
         </scene>
     </scenes>
+    <color key="tintColor" systemColor="systemGreenColor"/>
+    <resources>
+        <image name="BACK" width="1024" height="1536"/>
+        <image name="boybook" width="1024" height="1536"/>
+        <image name="children2" width="1536" height="1024"/>
+        <image name="gameback" width="1024" height="1536"/>
+        <image name="gear" catalog="system" width="128" height="122"/>
+        <image name="homekit" catalog="system" width="128" height="104"/>
+        <image name="person.crop.square.fill" catalog="system" width="128" height="114"/>
+        <image name="trofhy" width="1024" height="1536"/>
+        <image name="trophy.fill" catalog="system" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

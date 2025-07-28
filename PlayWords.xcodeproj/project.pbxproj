@@ -16,6 +16,7 @@
 		DADBED482E3646C6009F457F /* PlayWordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBED472E3646C6009F457F /* PlayWordsTests.swift */; };
 		DADBED522E3646C6009F457F /* PlayWordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBED512E3646C6009F457F /* PlayWordsUITests.swift */; };
 		DADBED542E3646C6009F457F /* PlayWordsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBED532E3646C6009F457F /* PlayWordsUITestsLaunchTests.swift */; };
+		DADBED612E366BE4009F457F /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBED602E366BE4009F457F /* HomeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		DADBED4D2E3646C6009F457F /* PlayWordsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayWordsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADBED512E3646C6009F457F /* PlayWordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayWordsUITests.swift; sourceTree = "<group>"; };
 		DADBED532E3646C6009F457F /* PlayWordsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayWordsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DADBED602E366BE4009F457F /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				DADBED392E3646C6009F457F /* Assets.xcassets */,
 				DADBED3B2E3646C6009F457F /* LaunchScreen.storyboard */,
 				DADBED3E2E3646C6009F457F /* Info.plist */,
+				DADBED602E366BE4009F457F /* HomeController.swift */,
 			);
 			path = PlayWords;
 			sourceTree = "<group>";
@@ -190,6 +193,9 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				KnownAssetTags = (
+					"חחח",
+				);
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
@@ -258,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DADBED612E366BE4009F457F /* HomeController.swift in Sources */,
 				DADBED352E3646C0009F457F /* ViewController.swift in Sources */,
 				DADBED312E3646C0009F457F /* AppDelegate.swift in Sources */,
 				DADBED332E3646C0009F457F /* SceneDelegate.swift in Sources */,
