@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FVH-hz-cY0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c9j-SU-DWc">
     <device id="retina6_12" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -235,7 +236,7 @@
                                             </mask>
                                         </variation>
                                     </stackView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boybook" translatesAutoresizingMaskIntoConstraints="NO" id="RJ8-xz-6ef">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boy" translatesAutoresizingMaskIntoConstraints="NO" id="RJ8-xz-6ef">
                                         <rect key="frame" x="0.0" y="0.0" width="552" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="zg8-mw-uYH">
@@ -343,7 +344,7 @@
                                         </variation>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="1" green="0.95311471161754235" blue="0.79507125401278955" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="BnN-dT-gYT" firstAttribute="top" secondItem="YT2-R6-Uml" secondAttribute="bottom" id="3bY-sY-TV6"/>
                                     <constraint firstItem="F5q-bc-6lu" firstAttribute="top" secondItem="BnN-dT-gYT" secondAttribute="bottom" id="p74-D4-7Rb"/>
@@ -431,7 +432,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ka5-gl-rdj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-151.40845070422537" y="614.50381679389307"/>
+            <point key="canvasLocation" x="-806" y="439"/>
         </scene>
         <!--Settings-->
         <scene sceneID="z2f-7e-8yy">
@@ -680,7 +681,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iEc-t7-FGl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1520" y="-304"/>
+            <point key="canvasLocation" x="484" y="-303"/>
         </scene>
         <!--Home-->
         <scene sceneID="mSV-sT-LgO">
@@ -879,12 +880,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r2a-dR-js6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-811" y="-254"/>
+            <point key="canvasLocation" x="-805" y="-303"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="PWM-KM-tM7">
             <objects>
                 <tabBarController id="FVH-hz-cY0" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BwR-bM-Ht9"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WI3-bQ-5ui">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -898,19 +900,430 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NHk-tW-8Em" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-879" y="1039"/>
+            <point key="canvasLocation" x="-742" y="1324"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="BV6-TM-Qo4">
+            <objects>
+                <viewController id="c9j-SU-DWc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xHr-62-6Ek">
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PlY-vM-pQJ">
+                                <rect key="frame" x="50" y="20" width="752" height="320"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="children" translatesAutoresizingMaskIntoConstraints="NO" id="32Y-a2-Cje">
+                                        <rect key="frame" x="0.0" y="0.0" width="752" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="zbz-4O-wj5">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="100"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="zbz-4O-wj5"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HW2-U1-zKE">
+                                        <rect key="frame" x="0.0" y="100" width="752" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="L1l-zr-Z6K">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="70"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="70"/>
+                                        <color key="textColor" red="0.97959488630000002" green="0.66621750589999995" blue="0.086618550119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="27"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="L1l-zr-Z6K"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3SS-Nt-caO">
+                                        <rect key="frame" x="0.0" y="130" width="752" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="5Mc-KG-TUa">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="5Mc-KG-TUa"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHr-13-Nly">
+                                        <rect key="frame" x="0.0" y="140" width="752" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="UzK-8g-KxB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                        <color key="textColor" red="0.97964972260000005" green="0.66223388910000003" blue="0.08772490174" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZuK-vr-N9V">
+                                        <rect key="frame" x="0.0" y="170" width="752" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="GiE-ab-DpX">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                            <mask key="constraints">
+                                                <include reference="GiE-ab-DpX"/>
+                                            </mask>
+                                        </variation>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ri-Sc-UIA">
+                                        <rect key="frame" x="0.0" y="200" width="752" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="W0Y-QT-7ky"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                        <color key="textColor" red="0.97964972260000005" green="0.66223388910000003" blue="0.08772490174" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nBo-Zr-2cN">
+                                        <rect key="frame" x="0.0" y="230" width="752" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="W2c-Dv-5Zv">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="30"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="W2c-Dv-5Zv"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                        </variation>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vah-1D-QSI">
+                                        <rect key="frame" x="0.0" y="260" width="752" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="LSA-We-a4E">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="LSA-We-a4E"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="Su2-XZ-D5Z">
+                                        <rect key="frame" x="0.0" y="280" width="752" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uua-Nv-ZKy">
+                                                <rect key="frame" x="0.0" y="0.0" width="276" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="UXN-Eg-M4E"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Log In">
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="FVH-hz-cY0" kind="show" id="Olx-eu-3pN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PU7-BB-g89">
+                                                <rect key="frame" x="476" y="0.0" width="276" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="dcY-WT-IHh"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Sign Up">
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="hNl-jN-2pF" kind="show" id="24a-Jw-lgl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="9YW-Oe-W9K"/>
+                                        </constraints>
+                                        <variation key="heightClass=regular-widthClass=compact" spacing="50"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YNT-5B-nnn">
+                                        <rect key="frame" x="0.0" y="320" width="752" height="0.0"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="Q1d-cY-UL7">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="192"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Q1d-cY-UL7"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="blue"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xEw-pi-o5Z"/>
+                        <color key="backgroundColor" name="blue"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="PlY-vM-pQJ" secondAttribute="bottom" constant="20" id="e36-ez-2Tr">
+                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                            </constraint>
+                            <constraint firstItem="PlY-vM-pQJ" firstAttribute="leading" secondItem="xHr-62-6Ek" secondAttribute="leading" constant="50" id="fph-dl-ZyZ">
+                                <variation key="heightClass=regular-widthClass=compact" constant="16"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="PlY-vM-pQJ" secondAttribute="trailing" constant="50" id="g3G-B8-tDg">
+                                <variation key="heightClass=regular-widthClass=compact" constant="16"/>
+                            </constraint>
+                            <constraint firstItem="PlY-vM-pQJ" firstAttribute="top" secondItem="xHr-62-6Ek" secondAttribute="top" constant="20" id="w51-hT-TDa">
+                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="e36-ez-2Tr"/>
+                                <include reference="fph-dl-ZyZ"/>
+                                <include reference="g3G-B8-tDg"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="f3a-qZ-wva"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uqj-DJ-Zq3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1525" y="439"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="y6K-hV-CK4">
+            <objects>
+                <viewController id="hNl-jN-2pF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IQm-PY-TwQ">
+                        <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="W2D-u6-mpD">
+                                <rect key="frame" x="50" y="20" width="752" height="330"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="children" translatesAutoresizingMaskIntoConstraints="NO" id="1oM-Lu-82v">
+                                        <rect key="frame" x="0.0" y="0.0" width="752" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="KI8-OQ-Vmz">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="100"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="KI8-OQ-Vmz"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3M8-BH-tcM">
+                                        <rect key="frame" x="0.0" y="100" width="752" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="rNm-zC-nb9">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="70"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="70"/>
+                                        <color key="textColor" red="0.97959488630000002" green="0.66621750589999995" blue="0.086618550119999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="rNm-zC-nb9"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="MxN-3o-omN">
+                                        <rect key="frame" x="0.0" y="130" width="752" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="Uzl-eD-7Sz">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Uzl-eD-7Sz"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xr5-xW-dgy">
+                                        <rect key="frame" x="0.0" y="140" width="752" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Ic0-f2-vso"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                        <color key="textColor" red="0.97964972260000005" green="0.66223388910000003" blue="0.08772490174" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bVs-WR-hYC">
+                                        <rect key="frame" x="0.0" y="170" width="752" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Sob-Xv-y5Y">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="Sob-Xv-y5Y"/>
+                                            </mask>
+                                        </variation>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7q-Hc-dVM">
+                                        <rect key="frame" x="0.0" y="200" width="752" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Gz5-ml-gO6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                        <color key="textColor" red="0.97964972260000005" green="0.66223388910000003" blue="0.08772490174" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="*******" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uhJ-Yz-ZpD">
+                                        <rect key="frame" x="0.0" y="230" width="752" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="weF-iq-8HH">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="30"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                            <mask key="constraints">
+                                                <include reference="weF-iq-8HH"/>
+                                            </mask>
+                                        </variation>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="O1B-VB-4Hd">
+                                        <rect key="frame" x="0.0" y="260" width="752" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="pSF-za-wLE">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="pSF-za-wLE"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="dqw-rw-UqI">
+                                        <rect key="frame" x="0.0" y="290" width="752" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9Y-8l-O5z">
+                                                <rect key="frame" x="0.0" y="0.0" width="276" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="t4Q-0s-ZkB"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Sign Up">
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hN9-TZ-MHx">
+                                                <rect key="frame" x="476" y="0.0" width="276" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="jsQ-Mi-rES"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Log In">
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="c9j-SU-DWc" kind="show" id="fii-Jx-dd0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Ig3-Gt-TrL"/>
+                                        </constraints>
+                                        <variation key="heightClass=regular-widthClass=compact" spacing="50"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RMw-eq-9bs">
+                                        <rect key="frame" x="0.0" y="330" width="752" height="0.0"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="BVP-ki-A4A">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="192"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="BVP-ki-A4A"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="blue"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wu1-c2-Mf4"/>
+                        <color key="backgroundColor" name="blue"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="W2D-u6-mpD" secondAttribute="bottom" constant="20" id="W4g-6e-OCa">
+                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                            </constraint>
+                            <constraint firstAttribute="trailing" secondItem="W2D-u6-mpD" secondAttribute="trailing" constant="50" id="fHd-ip-0iN">
+                                <variation key="heightClass=regular-widthClass=compact" constant="16"/>
+                            </constraint>
+                            <constraint firstItem="W2D-u6-mpD" firstAttribute="top" secondItem="IQm-PY-TwQ" secondAttribute="top" constant="20" id="sq8-8B-vXc">
+                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                            </constraint>
+                            <constraint firstItem="W2D-u6-mpD" firstAttribute="leading" secondItem="IQm-PY-TwQ" secondAttribute="leading" constant="50" id="vFr-MF-svb">
+                                <variation key="heightClass=regular-widthClass=compact" constant="16"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="W4g-6e-OCa"/>
+                                <include reference="fHd-ip-0iN"/>
+                                <include reference="vFr-MF-svb"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="CNN-1L-Q1E"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8RT-Fi-fo4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1525" y="-303"/>
         </scene>
     </scenes>
     <color key="tintColor" systemColor="systemGreenColor"/>
     <resources>
         <image name="BACK" width="1024" height="1536"/>
-        <image name="boybook" width="1024" height="1536"/>
+        <image name="boy" width="314" height="334"/>
+        <image name="children" width="1536" height="1024"/>
         <image name="children2" width="1536" height="1024"/>
         <image name="gameback" width="1024" height="1536"/>
         <image name="gear" catalog="system" width="128" height="122"/>
         <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="trofhy" width="1024" height="1536"/>
         <image name="trophy.fill" catalog="system" width="128" height="128"/>
+        <namedColor name="blue">
+            <color red="0.39899998903274536" green="0.79799997806549072" blue="0.96200001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -919,6 +1332,9 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
