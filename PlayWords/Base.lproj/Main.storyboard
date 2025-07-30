@@ -911,12 +911,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="W2D-u6-mpD">
-                                <rect key="frame" x="120" y="10" width="612" height="291"/>
+                                <rect key="frame" x="120" y="10" width="612" height="351"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="children" translatesAutoresizingMaskIntoConstraints="NO" id="1oM-Lu-82v">
                                         <rect key="frame" x="0.0" y="0.0" width="612" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="250" id="KI8-OQ-Vmz">
+                                            <constraint firstAttribute="height" constant="100" id="KI8-OQ-Vmz">
                                                 <variation key="heightClass=compact-widthClass=regular" constant="40"/>
                                             </constraint>
                                         </constraints>
@@ -974,7 +974,7 @@
                                             </mask>
                                         </variation>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xr5-xW-dgy">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xr5-xW-dgy">
                                         <rect key="frame" x="0.0" y="71" width="612" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Ic0-f2-vso"/>
@@ -1001,7 +1001,7 @@
                                             </mask>
                                         </variation>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7q-Hc-dVM">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7q-Hc-dVM">
                                         <rect key="frame" x="0.0" y="131" width="612" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Gz5-ml-gO6"/>
@@ -1010,7 +1010,7 @@
                                         <color key="textColor" red="0.97964972260000005" green="0.66223388910000003" blue="0.08772490174" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="*******" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uhJ-Yz-ZpD">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uhJ-Yz-ZpD">
                                         <rect key="frame" x="0.0" y="161" width="612" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="weF-iq-8HH">
@@ -1026,8 +1026,33 @@
                                             </mask>
                                         </variation>
                                     </textField>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="O1B-VB-4Hd">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bjm-Vx-Mvx">
                                         <rect key="frame" x="0.0" y="191" width="612" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Kvg-Wu-lXO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                        <color key="textColor" red="0.97964972260000005" green="0.66223388910000003" blue="0.08772490174" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bzy-Zu-6et">
+                                        <rect key="frame" x="0.0" y="221" width="612" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="FjY-2D-wej">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="30"/>
+                                            </constraint>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                            <mask key="constraints">
+                                                <include reference="FjY-2D-wej"/>
+                                            </mask>
+                                        </variation>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="O1B-VB-4Hd">
+                                        <rect key="frame" x="0.0" y="251" width="612" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="pSF-za-wLE">
                                                 <variation key="heightClass=regular-widthClass=compact" constant="50"/>
@@ -1040,7 +1065,7 @@
                                         </variation>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="dqw-rw-UqI">
-                                        <rect key="frame" x="0.0" y="221" width="612" height="40"/>
+                                        <rect key="frame" x="0.0" y="281" width="612" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9Y-8l-O5z">
                                                 <rect key="frame" x="0.0" y="0.0" width="206" height="40"/>
@@ -1074,7 +1099,7 @@
                                         <variation key="heightClass=regular-widthClass=compact" spacing="50"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RMw-eq-9bs">
-                                        <rect key="frame" x="0.0" y="261" width="612" height="30"/>
+                                        <rect key="frame" x="0.0" y="321" width="612" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="BVP-ki-A4A">
                                                 <variation key="heightClass=regular-widthClass=compact" constant="50"/>
@@ -1134,7 +1159,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="children" translatesAutoresizingMaskIntoConstraints="NO" id="CZP-l2-2UI">
                                         <rect key="frame" x="0.0" y="0.0" width="612" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="250" id="heh-BZ-NcO">
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="heh-BZ-NcO">
                                                 <variation key="heightClass=compact-widthClass=regular" constant="40"/>
                                             </constraint>
                                         </constraints>
@@ -1330,8 +1355,8 @@
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
                                 <include reference="Piv-vf-GEp"/>
-                                <include reference="ywh-IU-YKt"/>
                                 <include reference="Rmt-Nz-lJD"/>
+                                <include reference="ywh-IU-YKt"/>
                             </mask>
                         </variation>
                     </view>
