@@ -15,6 +15,8 @@
 		DAAC9E2E2E3A721200E788EA /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = DAAC9E2D2E3A721200E788EA /* FirebaseDatabase */; };
 		DAAC9E332E3B60B100E788EA /* LogInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC9E322E3B60B100E788EA /* LogInController.swift */; };
 		DAAC9E352E3BC30C00E788EA /* FirebaseUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC9E342E3BC30C00E788EA /* FirebaseUserInfo.swift */; };
+		DAAC9E372E3BEAA600E788EA /* ReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC9E362E3BEAA600E788EA /* ReviewController.swift */; };
+		DAAC9E392E3BEF7700E788EA /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC9E382E3BEF7700E788EA /* SettingsController.swift */; };
 		DADBED312E3646C0009F457F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBED302E3646C0009F457F /* AppDelegate.swift */; };
 		DADBED332E3646C0009F457F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBED322E3646C0009F457F /* SceneDelegate.swift */; };
 		DADBED352E3646C0009F457F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBED342E3646C0009F457F /* ViewController.swift */; };
@@ -49,6 +51,8 @@
 		DAAC9E2A2E3A708900E788EA /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		DAAC9E322E3B60B100E788EA /* LogInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInController.swift; sourceTree = "<group>"; };
 		DAAC9E342E3BC30C00E788EA /* FirebaseUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserInfo.swift; sourceTree = "<group>"; };
+		DAAC9E362E3BEAA600E788EA /* ReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewController.swift; sourceTree = "<group>"; };
+		DAAC9E382E3BEF7700E788EA /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		DADBED2D2E3646C0009F457F /* PlayWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADBED302E3646C0009F457F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DADBED322E3646C0009F457F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 			children = (
 				DADBED602E366BE4009F457F /* HomeController.swift */,
 				DAAC9E322E3B60B100E788EA /* LogInController.swift */,
+				DAAC9E362E3BEAA600E788EA /* ReviewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 				DADBED392E3646C6009F457F /* Assets.xcassets */,
 				DADBED3B2E3646C6009F457F /* LaunchScreen.storyboard */,
 				DADBED3E2E3646C6009F457F /* Info.plist */,
+				DAAC9E382E3BEF7700E788EA /* SettingsController.swift */,
 			);
 			path = PlayWords;
 			sourceTree = "<group>";
@@ -318,10 +324,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAAC9E392E3BEF7700E788EA /* SettingsController.swift in Sources */,
 				DADBED612E366BE4009F457F /* HomeController.swift in Sources */,
 				DAAC9E332E3B60B100E788EA /* LogInController.swift in Sources */,
 				DADBED352E3646C0009F457F /* ViewController.swift in Sources */,
 				DADBED312E3646C0009F457F /* AppDelegate.swift in Sources */,
+				DAAC9E372E3BEAA600E788EA /* ReviewController.swift in Sources */,
 				DADBED332E3646C0009F457F /* SceneDelegate.swift in Sources */,
 				DAAC9E352E3BC30C00E788EA /* FirebaseUserInfo.swift in Sources */,
 				DAAC9E2B2E3A708900E788EA /* FirebaseAuthManager.swift in Sources */,
