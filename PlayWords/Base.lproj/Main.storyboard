@@ -432,7 +432,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ka5-gl-rdj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-806" y="439"/>
+            <point key="canvasLocation" x="-806" y="-1347"/>
         </scene>
         <!--Settings-->
         <scene sceneID="z2f-7e-8yy">
@@ -877,6 +877,9 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="k54-oa-egV"/>
+                    <connections>
+                        <outlet property="scoerLabel" destination="2V8-TV-eak" id="bLk-8e-jOg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r2a-dR-js6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -885,7 +888,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="PWM-KM-tM7">
             <objects>
-                <tabBarController id="FVH-hz-cY0" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBar" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FVH-hz-cY0" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="BwR-bM-Ht9"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WI3-bQ-5ui">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
@@ -900,7 +903,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NHk-tW-8Em" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-742" y="1324"/>
+            <point key="canvasLocation" x="-255" y="831"/>
         </scene>
         <!--Sign up-->
         <scene sceneID="y6K-hV-CK4">

@@ -14,6 +14,7 @@ class FirebaseAuthManager {
     static let shared = FirebaseAuthManager()
     
     private let databaseURL = "https://word-game---ios-default-rtdb.europe-west1.firebasedatabase.app"
+    
     private var ref: DatabaseReference
 
     private init() {
@@ -44,7 +45,7 @@ class FirebaseAuthManager {
         }
     }
     
-    private func formatEmail(_ email: String) -> String {
+     func formatEmail(_ email: String) -> String {
         return email
             .replacingOccurrences(of: ".", with: "_")
             .replacingOccurrences(of: "@", with: "_")
