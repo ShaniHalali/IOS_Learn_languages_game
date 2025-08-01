@@ -9,8 +9,8 @@ import UIKit
 
 class SettingsController: UIViewController {
     
-    @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var lanSegment: UISegmentedControl!
     @IBOutlet weak var easySwitch: UISwitch!
     @IBOutlet weak var midSwitch: UISwitch!
@@ -24,24 +24,55 @@ class SettingsController: UIViewController {
         if let user_key = UserDefaults.standard.string(forKey: "user_key") {
             print("user_key from preferences to settings: \(user_key)")
             
+            FirebaseUserInfo.info.getUserName(user_key: user_key) { success in
+                if let name = success {
+                    DispatchQueue.main.async {
+                        self.nameLabel.text = "Name: \(name)"
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.nameLabel.text = "Name not found"
+                    }
+                }
+            }
+
+            FirebaseUserInfo.info.getUseremail(user_key: user_key) { success in
+                if let email = success {
+                    DispatchQueue.main.async {
+                        self.emailLabel.text = "Email: \(email)"
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.emailLabel.text = "Email not found"
+                    }
+                }
+            }
+
             
-            //name field
+            /*
+            //name label
             let name = FirebaseUserInfo.info.getUserName(user_key: user_key) { success in
                 if let name = success {
-                    self.nameTextField.text = name
+                    self.nameLabel.text = "Name: \(name)"
                 }else{
                     print("name is nil")
+                    self.nameLabel.text = "Name : is nil"
+
                 }
             }
+             
             
-            //email field
+            //email label
             let email = FirebaseUserInfo.info.getUseremail(user_key: user_key) { success in
                 if let email = success {
-                    self.emailTextField.text = email
+                    self.emailLabel.text = "Email: \(email)"
                 }else{
                     print("email is nil")
+                    self.emailLabel.text = "Email: is nil"
+
                 }
             }
+             */
             
             //language
             let lan = FirebaseUserInfo.info.getUselanguge(user_key: user_key) { success in

@@ -142,7 +142,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BE1-VR-VRC">
-                                                <rect key="frame" x="240.66666666666674" y="0.0" width="120.33333333333334" height="50"/>
+                                                <rect key="frame" x="240.66666666666671" y="0.0" width="120.33333333333334" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqF-Va-6Fj">
                                                         <rect key="frame" x="0.0" y="0.0" width="120.33333333333333" height="50"/>
@@ -258,13 +258,13 @@
                                             <constraint firstAttribute="height" constant="40" id="d4C-Qv-QYI"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="Black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מילה" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRw-a1-9tz">
                                         <rect key="frame" x="0.0" y="240" width="293" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="Black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YT2-R6-Uml">
@@ -359,7 +359,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rZ-Pq-xaQ">
                                         <rect key="frame" x="0.0" y="0.0" width="224.66666666666666" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="Black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="❤️❤️❤️" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPp-ZD-ygx">
@@ -500,22 +500,26 @@
                                             </mask>
                                         </variation>
                                     </stackView>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Name: Shani" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U3i-QR-Zg6">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name : " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vK7-QT-TJJ">
                                         <rect key="frame" x="0.0" y="170" width="361" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Vyp-om-ICd"/>
+                                            <constraint firstAttribute="height" constant="30" id="XkQ-pL-1Fq"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email: shanihlli1234@gmail.com" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lbJ-pf-FtQ">
+                                        <color key="textColor" name="Black"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="trp-Ln-sk6">
                                         <rect key="frame" x="0.0" y="200" width="361" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="AoS-Bq-2hV"/>
+                                            <constraint firstAttribute="height" constant="30" id="fDQ-CA-Tw0"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                        <color key="textColor" name="Black"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uoq-BA-vIc">
                                         <rect key="frame" x="0.0" y="230" width="361" height="50"/>
                                         <constraints>
@@ -686,10 +690,10 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="7ij-vf-Zxk"/>
                     <connections>
                         <outlet property="easySwitch" destination="vSw-YA-ufE" id="bXQ-dK-CbQ"/>
-                        <outlet property="emailTextField" destination="lbJ-pf-FtQ" id="9uk-ez-FSD"/>
+                        <outlet property="emailLabel" destination="trp-Ln-sk6" id="wdt-1P-vGM"/>
                         <outlet property="lanSegment" destination="fPf-ny-rJD" id="QTJ-Jf-FXr"/>
                         <outlet property="midSwitch" destination="NQw-tJ-mtG" id="ENJ-SZ-Cg6"/>
-                        <outlet property="nameTextField" destination="U3i-QR-Zg6" id="AB4-Tr-4Zh"/>
+                        <outlet property="nameLabel" destination="vK7-QT-TJJ" id="pYn-yk-YLX"/>
                         <outlet property="proSwitch" destination="eev-Jw-fA6" id="7y1-hk-fR5"/>
                     </connections>
                 </viewController>
@@ -1415,6 +1419,9 @@
         <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="trofhy" width="1024" height="1536"/>
         <image name="trophy.fill" catalog="system" width="128" height="128"/>
+        <namedColor name="Black">
+            <color red="0.033166787059036751" green="0.033166787059036751" blue="0.033166787059036751" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="blue">
             <color red="0.39899998903274536" green="0.79799997806549072" blue="0.96200001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

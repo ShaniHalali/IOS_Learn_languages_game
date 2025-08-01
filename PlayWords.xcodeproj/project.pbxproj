@@ -120,6 +120,7 @@
 				DADBED602E366BE4009F457F /* HomeController.swift */,
 				DAAC9E322E3B60B100E788EA /* LogInController.swift */,
 				DAAC9E362E3BEAA600E788EA /* ReviewController.swift */,
+				DAAC9E382E3BEF7700E788EA /* SettingsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -158,7 +159,6 @@
 				DADBED392E3646C6009F457F /* Assets.xcassets */,
 				DADBED3B2E3646C6009F457F /* LaunchScreen.storyboard */,
 				DADBED3E2E3646C6009F457F /* Info.plist */,
-				DAAC9E382E3BEF7700E788EA /* SettingsController.swift */,
 			);
 			path = PlayWords;
 			sourceTree = "<group>";
