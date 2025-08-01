@@ -16,6 +16,8 @@ class SettingsController: UIViewController {
     @IBOutlet weak var midSwitch: UISwitch!
     @IBOutlet weak var proSwitch: UISwitch!
     
+    var difficulty: String?
+    
     var user_key: String?
     
     override func viewDidLoad() {
@@ -24,93 +26,141 @@ class SettingsController: UIViewController {
         if let user_key = UserDefaults.standard.string(forKey: "user_key") {
             print("user_key from preferences to settings: \(user_key)")
             
-            FirebaseUserInfo.info.getUserName(user_key: user_key) { success in
-                if let name = success {
-                    DispatchQueue.main.async {
-                        self.nameLabel.text = "Name: \(name)"
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        self.nameLabel.text = "Name not found"
-                    }
-                }
-            }
-
-            FirebaseUserInfo.info.getUseremail(user_key: user_key) { success in
-                if let email = success {
-                    DispatchQueue.main.async {
-                        self.emailLabel.text = "Email: \(email)"
-                    }
-                } else {
-                    DispatchQueue.main.async {
-                        self.emailLabel.text = "Email not found"
-                    }
-                }
-            }
-
             
-            /*
-            //name label
-            let name = FirebaseUserInfo.info.getUserName(user_key: user_key) { success in
-                if let name = success {
+            // upload user info from firebase
+            fatchUsername(key: user_key)
+            fatchUserEmail(key: user_key)
+            fatchUserLan(key: user_key)
+            fatchUserDifficulty(key: user_key)
+            
+            // user chance settings
+            
+            //user chance his difficulty
+            easySwitch.addAction(UIAction { [weak self] _ in
+                self?.switchChanged(key: user_key, difficulty: "easy")
+            }, for: .valueChanged)
+
+            midSwitch.addAction(UIAction { [weak self] _ in
+                self?.switchChanged(key: user_key, difficulty: "mid")
+            }, for: .valueChanged)
+
+            proSwitch.addAction(UIAction { [weak self] _ in
+                self?.switchChanged(key: user_key, difficulty: "pro")
+            }, for: .valueChanged)
+        } else {
+            print("user_key was not found in UserDefaults.")
+        }
+
+        
+    
+    }
+    
+    func fatchUsername (key: String){
+        FirebaseUserInfo.info.getUserName(user_key: key) { success in
+            if let name = success {
+                DispatchQueue.main.async {
                     self.nameLabel.text = "Name: \(name)"
-                }else{
-                    print("name is nil")
-                    self.nameLabel.text = "Name : is nil"
-
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.nameLabel.text = "Name not found"
                 }
             }
-             
-            
-            //email label
-            let email = FirebaseUserInfo.info.getUseremail(user_key: user_key) { success in
-                if let email = success {
+        }
+    }
+    
+    func fatchUserEmail (key: String){
+        FirebaseUserInfo.info.getUseremail(user_key: key) { success in
+            if let email = success {
+                DispatchQueue.main.async {
                     self.emailLabel.text = "Email: \(email)"
-                }else{
-                    print("email is nil")
-                    self.emailLabel.text = "Email: is nil"
-
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.emailLabel.text = "Email not found"
                 }
             }
-             */
-            
-            //language
-            let lan = FirebaseUserInfo.info.getUselanguge(user_key: user_key) { success in
-                if let lan = success{
-                    if lan.elementsEqual("spanish"){
-                        self.lanSegment.selectedSegmentIndex = 2
-                    }else{
-                        self.lanSegment.selectedSegmentIndex = 1
-                        
-                    }
+        }
+    }
+    
+    func fatchUserLan (key: String){
+        let lan = FirebaseUserInfo.info.getUselanguge(user_key: key) { success in
+            if let lan = success{
+                if lan.elementsEqual("spanish"){
+                    self.lanSegment.selectedSegmentIndex = 2
                 }else{
-                    print("lan is nil")
+                    self.lanSegment.selectedSegmentIndex = 1
                     
                 }
+            }else{
+                print("lan is nil")
                 
             }
             
-            // difficulty switches
-            let difficulty = FirebaseUserInfo.info.getUserDifficlity(user_key: user_key) { success in
-                if let difficulty = success{
-                    if difficulty.elementsEqual("easy"){
-                        self.easySwitch.isOn = true
-                        self.midSwitch.isOn = false
-                        self.proSwitch.isOn = false
-                        
-                    }else if difficulty.elementsEqual("mid"){
-                        self.easySwitch.isOn = false
-                        self.midSwitch.isOn = true
-                        self.proSwitch.isOn = false
-                        
-                    }else{
-                        self.easySwitch.isOn = false
-                        self.midSwitch.isOn = false
-                        self.proSwitch.isOn = true                }
+        }
+        
+    }
+    
+    func fatchUserDifficulty (key: String){
+        
+        let difficulty = FirebaseUserInfo.info.getUserDifficlity(user_key: key) { success in
+            if let difficulty = success{
+                if difficulty.elementsEqual("easy"){
+                    self.easySwitchIsOn ()
+                    
+                }else if difficulty.elementsEqual("mid"){
+                    self.midSwitchIsOn ()
+                    
+                }else{
+                    self.proSwithIsOn ()
                 }
             }
-            
         }
     }
+    
+    func easySwitchIsOn () {
+        self.easySwitch.isOn = true
+        self.midSwitch.isOn = false
+        self.proSwitch.isOn = false
+    }
+    
+    func midSwitchIsOn () {
+        self.easySwitch.isOn = false
+        self.midSwitch.isOn = true
+        self.proSwitch.isOn = false
+    }
+    
+    func proSwithIsOn () {
+        self.easySwitch.isOn = false
+        self.midSwitch.isOn = false
+        self.proSwitch.isOn = true
+    }
+    
+    
+       func switchChanged(key: String, difficulty: String ) {
+      
+           if difficulty.elementsEqual("easy"){
+               easySwitchIsOn()
+           } else if difficulty.elementsEqual("mid"){
+               midSwitchIsOn()
+           }else{
+               proSwithIsOn()
+           }
+           updateUserDifficulty (key: key, diff:difficulty)
+
+        }
+      
+    
+    
+    func updateUserDifficulty (key: String, diff: String){
+        FirebaseUserSettingsManager.update.updateDifficulty(key: key, updateDifTo: diff) { success in
+            if success {
+                print("Difficulty successfully updated to \(diff).")
+            } else {
+                print("Failed to update difficulty.")
+            }
+        }
+    }
+   
     
 }
