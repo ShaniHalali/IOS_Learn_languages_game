@@ -17,7 +17,9 @@
 		DAAC9E352E3BC30C00E788EA /* FirebaseUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC9E342E3BC30C00E788EA /* FirebaseUserInfo.swift */; };
 		DAAC9E372E3BEAA600E788EA /* ReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC9E362E3BEAA600E788EA /* ReviewController.swift */; };
 		DAAC9E392E3BEF7700E788EA /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC9E382E3BEF7700E788EA /* SettingsController.swift */; };
-		DAAC9E3B2E3CBDC900E788EA /* FirebaseUserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC9E3A2E3CBDC900E788EA /* FirebaseUserDataManager.swift */; };
+		DAAC9E3B2E3CBDC900E788EA /* FirebaseUpdateUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC9E3A2E3CBDC900E788EA /* FirebaseUpdateUserInfo.swift */; };
+		DAAC9E3D2E3D14D300E788EA /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC9E3C2E3D14D200E788EA /* SignUpController.swift */; };
+		DAAC9E3F2E3D290E00E788EA /* FirebaseSignUpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC9E3E2E3D290E00E788EA /* FirebaseSignUpManager.swift */; };
 		DADBED312E3646C0009F457F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBED302E3646C0009F457F /* AppDelegate.swift */; };
 		DADBED332E3646C0009F457F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBED322E3646C0009F457F /* SceneDelegate.swift */; };
 		DADBED352E3646C0009F457F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADBED342E3646C0009F457F /* ViewController.swift */; };
@@ -54,7 +56,9 @@
 		DAAC9E342E3BC30C00E788EA /* FirebaseUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserInfo.swift; sourceTree = "<group>"; };
 		DAAC9E362E3BEAA600E788EA /* ReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewController.swift; sourceTree = "<group>"; };
 		DAAC9E382E3BEF7700E788EA /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
-		DAAC9E3A2E3CBDC900E788EA /* FirebaseUserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserDataManager.swift; sourceTree = "<group>"; };
+		DAAC9E3A2E3CBDC900E788EA /* FirebaseUpdateUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUpdateUserInfo.swift; sourceTree = "<group>"; };
+		DAAC9E3C2E3D14D200E788EA /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		DAAC9E3E2E3D290E00E788EA /* FirebaseSignUpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseSignUpManager.swift; sourceTree = "<group>"; };
 		DADBED2D2E3646C0009F457F /* PlayWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADBED302E3646C0009F457F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DADBED322E3646C0009F457F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,7 +109,8 @@
 			children = (
 				DAAC9E342E3BC30C00E788EA /* FirebaseUserInfo.swift */,
 				DAAC9E2A2E3A708900E788EA /* FirebaseAuthManager.swift */,
-				DAAC9E3A2E3CBDC900E788EA /* FirebaseUserDataManager.swift */,
+				DAAC9E3A2E3CBDC900E788EA /* FirebaseUpdateUserInfo.swift */,
+				DAAC9E3E2E3D290E00E788EA /* FirebaseSignUpManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 				DADBED392E3646C6009F457F /* Assets.xcassets */,
 				DADBED3B2E3646C6009F457F /* LaunchScreen.storyboard */,
 				DADBED3E2E3646C6009F457F /* Info.plist */,
+				DAAC9E3C2E3D14D200E788EA /* SignUpController.swift */,
 			);
 			path = PlayWords;
 			sourceTree = "<group>";
@@ -328,7 +334,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAAC9E392E3BEF7700E788EA /* SettingsController.swift in Sources */,
-				DAAC9E3B2E3CBDC900E788EA /* FirebaseUserDataManager.swift in Sources */,
+				DAAC9E3B2E3CBDC900E788EA /* FirebaseUpdateUserInfo.swift in Sources */,
+				DAAC9E3F2E3D290E00E788EA /* FirebaseSignUpManager.swift in Sources */,
 				DADBED612E366BE4009F457F /* HomeController.swift in Sources */,
 				DAAC9E332E3B60B100E788EA /* LogInController.swift in Sources */,
 				DADBED352E3646C0009F457F /* ViewController.swift in Sources */,
@@ -336,6 +343,7 @@
 				DAAC9E372E3BEAA600E788EA /* ReviewController.swift in Sources */,
 				DADBED332E3646C0009F457F /* SceneDelegate.swift in Sources */,
 				DAAC9E352E3BC30C00E788EA /* FirebaseUserInfo.swift in Sources */,
+				DAAC9E3D2E3D14D300E788EA /* SignUpController.swift in Sources */,
 				DAAC9E2B2E3A708900E788EA /* FirebaseAuthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,11 +27,19 @@ class HomeController: UIViewController {
                     
                 }
             }
-            
-            
-            
-            
-            
         }
     }
+    
+    @IBAction func logOutTapped(_ sender: Any) {
+        //remove the current user key
+        UserDefaults.standard.removeObject(forKey: "user_key")
+        print("key removed")
+        
+        //go out to login screen
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let loginVC = storyboard.instantiateViewController(withIdentifier: "LogInController")
+        loginVC.modalPresentationStyle = .fullScreen
+        self.present(loginVC, animated: true, completion: nil)
+    }
+    
 }

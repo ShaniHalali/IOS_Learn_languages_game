@@ -16,7 +16,7 @@ class FirebaseAuthManager {
     private let databaseURL = "https://word-game---ios-default-rtdb.europe-west1.firebasedatabase.app"
     
     private var ref: DatabaseReference
-
+    
     private init() {
         // Initialize reference with correct database URL
         self.ref = Database.database(url: databaseURL).reference().child("users")
@@ -45,10 +45,15 @@ class FirebaseAuthManager {
         }
     }
     
-     func formatEmail(_ email: String) -> String {
-        return email
-            .replacingOccurrences(of: ".", with: "_")
-            .replacingOccurrences(of: "@", with: "_")
-    }
-}
 
+        
+        func formatEmail(_ email: String) -> String {
+            return email
+                .replacingOccurrences(of: ".", with: "_")
+                .replacingOccurrences(of: "@", with: "_")
+        }
+    
+    
+      
+    }
+    

@@ -27,7 +27,7 @@ class FirebaseUserSettingsManager {
     }
     
     func updateLanguage(key: String, updateLanTo: String, completion: @escaping (Bool) -> Void) {
-        ref.child(key).child("language").setValue(updateLanTo) { error, _ in
+        ref.child(key).child("lan").setValue(updateLanTo) { error, _ in
             completion(error == nil)
         }
     }

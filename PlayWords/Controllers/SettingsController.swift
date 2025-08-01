@@ -20,12 +20,15 @@ class SettingsController: UIViewController {
     
     var user_key: String?
     
+    var key: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let user_key = UserDefaults.standard.string(forKey: "user_key") {
             print("user_key from preferences to settings: \(user_key)")
             
+            key = user_key
             
             // upload user info from firebase
             fatchUsername(key: user_key)
@@ -50,6 +53,9 @@ class SettingsController: UIViewController {
         } else {
             print("user_key was not found in UserDefaults.")
         }
+        
+        //user change is learning language
+        
 
         
     
@@ -155,12 +161,35 @@ class SettingsController: UIViewController {
     func updateUserDifficulty (key: String, diff: String){
         FirebaseUserSettingsManager.update.updateDifficulty(key: key, updateDifTo: diff) { success in
             if success {
-                print("Difficulty successfully updated to \(diff).")
+                print("Difficulty successfully updated to \(diff)")
             } else {
-                print("Failed to update difficulty.")
+                print("Failed to update difficulty")
             }
         }
     }
    
+    @IBAction func segmentChangedByUser(_ sender: Any)  {
+        var lan = ""
+        if (sender as AnyObject).selectedSegmentIndex == 0{
+            print("spanish selected by user")
+            lan = "spanish"
+        }else{
+            print("english selected by user")
+            lan = "english"
+        }
+        
+        updateUserLanguage(key: key!, lan: lan)
+    }
     
+    func updateUserLanguage (key: String, lan: String ) {
+        FirebaseUserSettingsManager.update.updateLanguage(key: key, updateLanTo: lan) { success in
+            if success {
+                print("Difficulty successfully updated to \(lan)")
+            }else{
+                print("Failed to update language")
+
+            }
+            
+        }
+    }
 }
