@@ -61,7 +61,8 @@ class LogInController: UIViewController {
                 if tabBarController.viewControllers?.first is HomeController {
                     let userKey = FirebaseAuthManager.shared.formatEmail(email)
                     UserDefaults.standard.set(userKey, forKey: "user_key")
-                    /* used user defaults insted
+                    
+                    /* used user defaults insted pass the value
                      homeVC.user_key = userKey
                      print("user key = \(userKey)")
                      }else{
@@ -74,8 +75,5 @@ class LogInController: UIViewController {
                 }
             }
         }
-        
-        
-                
     }
 }

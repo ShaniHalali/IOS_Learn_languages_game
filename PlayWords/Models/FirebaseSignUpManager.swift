@@ -21,7 +21,7 @@ class FirebaseSignupManager {
     }
     
     func isAvaliableEmail(email: String, completion: @escaping (Bool, String?) -> Void) {
-        let formattedEmail = formatEmail(email)
+        let formattedEmail = formatEmail(email: email)
         
         //check if email not taken
         ref.child(formattedEmail).observeSingleEvent(of: .value) { snapshot in
@@ -34,7 +34,7 @@ class FirebaseSignupManager {
         }
     }
     
-    func formatEmail(_ email: String) -> String {
+    func formatEmail(email: String) -> String {
         return email
             .replacingOccurrences(of: ".", with: "_")
             .replacingOccurrences(of: "@", with: "_")
@@ -59,9 +59,26 @@ class FirebaseSignupManager {
         }
     }
     
-    func createNewAccount (email: String, username: String, password: String, completion: @escaping (Bool, String?) -> Void) {
+    func createNewAccount(email: String, username: String, password: String, difficulty: String, language: String, completion: @escaping (Bool, String?) -> Void) {
+        let key = formatEmail(email: email)
         
+        let newUser: [String: Any] = [
+            "email": email,
+            "username": username,
+            "password": password,
+            "difficulty": difficulty,
+            "lan": language,
+            "score": 0
+        ]
         
+        self.ref.child(key).setValue(newUser) { error, _ in
+            if let error = error {
+                completion(false, "Failed to create new account: \(error.localizedDescription)")
+            } else {
+                completion(true, "Created new account \(key)")
+            }
+        }
     }
+    
     
 }

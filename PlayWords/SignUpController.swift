@@ -8,7 +8,9 @@
 import UIKit
 
 class SignUpController: UIViewController {
-
+    
+    @IBOutlet weak var languageSegmant: UISegmentedControl!
+    @IBOutlet weak var difficultySegment: UISegmentedControl!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -18,47 +20,56 @@ class SignUpController: UIViewController {
         super.viewDidLoad()
         
         
-
+        
     }
     
     @IBAction func signupTapped(_ sender: Any) {
-        let name = nameTextField.text
-        let email = emailTextField.text
-        let password = passwordTextField.text
         
-        var emailAvaliable = false
-        var usernameAvaliable = false
-        
-        if email?.isEmpty == true || name?.isEmpty == true || password?.isEmpty == true {
-            showAlert(message: "Please enter all fiels")
+        guard let name = nameTextField.text, !name.isEmpty,
+              let email = emailTextField.text, !email.isEmpty,
+              let password = passwordTextField.text, !password.isEmpty else {
+            showAlert(message: "Please enter all fields")
+            return
         }
         
-        //check if its uniqe user in firebase
-        FirebaseSignupManager.create.isAvaliableEmail(email: email!) { success, message in
-            if !success {
-                self.showAlert(message: "This email is already Taken")
-            }else{
-               emailAvaliable = true
+        FirebaseSignupManager.create.isAvaliableEmail(email: email) { emailSuccess, _ in
+            if !emailSuccess {
+                self.showAlert(message: "This email is already taken")
+                return
+            }
+            
+            FirebaseSignupManager.create.isAvaliableUsername(username: name) { usernameSuccess, _ in
+                if !usernameSuccess {
+                    self.showAlert(message: "This username is already taken")
+                    return
+                }
+                
+                self.createNewUser(email: email , username: name, password: password)
             }
         }
+    }
+    
+    
+    func createNewUser(email: String, username: String, password: String) {
         
-        FirebaseSignupManager.create.isAvaliableUsername(username: name!) { success, message in
-            if !success{
-                self.showAlert(message: "this username is already Taken")
+        let difficulty = getUserDifficulty()
+        let language = getUserLanguage()
+        
+        // MARK: create new user in firebase
+        
+        FirebaseSignupManager.create.createNewAccount(email: email, username: username, password: password, difficulty: difficulty, language: language){ success, error in
+            if success {
+                print("User created successfully!")
+                self.goToHomeScreen(email: email)
+                
             }else{
-                usernameAvaliable = true
+                print("Error: \(error ?? "Unknown error")")
+                
             }
-        }
-        
-        if usernameAvaliable == true && emailAvaliable == true {
-            // MARK: create new user in firebase
-
-            goToHomeScreen()
         }
         
     }
     
-
     // MARK: end of viewdodload
     
     func showAlert(message: String) {
@@ -66,13 +77,48 @@ class SignUpController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default))
         present(alert, animated: true)
     }
-    
-    func goToHomeScreen(){
-        // MARK: do it
-        // create user defaults
-
-        //move screen
+    func getUserDifficulty() -> String {
+        
+        let index = difficultySegment.selectedSegmentIndex
+        
+        if index == 0 {
+            return "easy"
+        }else if index == 1 {
+            return "mid"
+        }
+        
+        return "pro"
+        
     }
-
-
+    
+    func getUserLanguage() -> String {
+        let index = languageSegmant.selectedSegmentIndex
+        
+        if index == 0 {
+            return "spanish"
+        }
+        
+        return "english"
+    }
+    
+    func goToHomeScreen(email: String){
+        if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let window = scene.windows.first {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            if let tabBarController = storyboard.instantiateViewController(withIdentifier: "MainTabBar") as? UITabBarController {
+                
+                if tabBarController.viewControllers?.first is HomeController {
+                    let userKey = FirebaseAuthManager.shared.formatEmail(email)
+                    UserDefaults.standard.set(userKey, forKey: "user_key")
+                    
+                    window.rootViewController = tabBarController
+                    window.makeKeyAndVisible()
+                }
+            }
+        }
+    }
+    
+    
+    
 }
