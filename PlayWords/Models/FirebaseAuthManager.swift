@@ -45,15 +45,15 @@ class FirebaseAuthManager {
         }
     }
     
-
-        
-        func formatEmail(_ email: String) -> String {
-            return email
-                .replacingOccurrences(of: ".", with: "_")
-                .replacingOccurrences(of: "@", with: "_")
-        }
     
     
-      
+    func formatEmail(_ email: String) -> String {
+        return email
+            .replacingOccurrences(of: ".", with: "_")
+            .replacingOccurrences(of: "@", with: "_")
     }
     
+    
+    
+}
+

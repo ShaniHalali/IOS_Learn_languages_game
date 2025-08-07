@@ -14,8 +14,31 @@ class HomeController: UIViewController {
         super.viewDidLoad()
         
         if let user_key = UserDefaults.standard.string(forKey: "user_key") {
+            // save in user defaults the user's language and difficulty
+            
+            FirebaseUserInfo.info.getUselanguge(user_key: user_key){ language in
+                if let userLanguage = language {
+                    print ("user_language = \(userLanguage)")
+                    UserDefaults.standard.set(userLanguage, forKey: "user_language")
+                    
+                }else{
+                    print("user_language = nil")
+                }
+                
+            }
+            
+            FirebaseUserInfo.info.getUserDifficlity(user_key: user_key){ difficulty in
+                if let userDifficulty = difficulty {
+                    print("user_difficulty = \(userDifficulty)")
+                    UserDefaults.standard.set(userDifficulty, forKey: "user_difficulty")
+                }else{
+                    print("user_difficulty = nil")
+                }
+            }
+            
+            
             print("user_key from preferences: \(user_key)")
-            let user_score = FirebaseUserInfo.info.getUserScore(user_key: user_key){ score in
+            FirebaseUserInfo.info.getUserScore(user_key: user_key){ score in
                 print("check firebase")
                 if let user_score = score {
                     self.scoerLabel.text = "🏆 : \(user_score)"

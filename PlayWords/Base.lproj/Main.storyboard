@@ -215,7 +215,7 @@
         <!--Game-->
         <scene sceneID="x2Z-5X-erD">
             <objects>
-                <viewController title="Game" id="fIH-0j-1EV" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameLanguageController" title="Game" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fIH-0j-1EV" customClass="GameLanguageController" customModule="PlayWords" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M31-M9-96b">
                         <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -255,6 +255,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eG-Nh-POg">
                                         <rect key="frame" x="0.0" y="150" width="552" height="40"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" constant="552" id="5rC-I1-qaj"/>
                                             <constraint firstAttribute="height" constant="40" id="d4C-Qv-QYI"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
@@ -303,6 +304,9 @@
                                                         <buttonConfiguration key="configuration" style="filled" title="wrong">
                                                             <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="wrongButtonTapped:" destination="fIH-0j-1EV" eventType="touchUpInside" id="nrI-sM-9eP"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -313,6 +317,9 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="256" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="correct"/>
+                                                        <connections>
+                                                            <action selector="currectButtonTapped:" destination="fIH-0j-1EV" eventType="touchUpInside" id="ySI-ug-STX"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -432,6 +439,12 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="NF9-MC-mLc"/>
+                    <connections>
+                        <outlet property="foreignWordLable" destination="8eG-Nh-POg" id="lHF-oB-dVt"/>
+                        <outlet property="lifeLable" destination="NPp-ZD-ygx" id="mzI-cm-wWd"/>
+                        <outlet property="scoreLable" destination="2rZ-Pq-xaQ" id="LDU-yp-Iej"/>
+                        <outlet property="translationLable" destination="pRw-a1-9tz" id="alI-pl-EDT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ka5-gl-rdj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

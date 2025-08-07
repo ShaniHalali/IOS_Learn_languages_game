@@ -36,17 +36,17 @@ class SettingsController: UIViewController {
             fatchUserLan(key: user_key)
             fatchUserDifficulty(key: user_key)
             
-            // user chance settings
+            // ---user change settings---
             
-            //user chance his difficulty
+            //user change his difficulty
             easySwitch.addAction(UIAction { [weak self] _ in
                 self?.switchChanged(key: user_key, difficulty: "easy")
             }, for: .valueChanged)
-
+            
             midSwitch.addAction(UIAction { [weak self] _ in
                 self?.switchChanged(key: user_key, difficulty: "mid")
             }, for: .valueChanged)
-
+            
             proSwitch.addAction(UIAction { [weak self] _ in
                 self?.switchChanged(key: user_key, difficulty: "pro")
             }, for: .valueChanged)
@@ -56,9 +56,9 @@ class SettingsController: UIViewController {
         
         //user change is learning language
         
-
         
-    
+        
+        
     }
     
     func fatchUsername (key: String){
@@ -90,7 +90,7 @@ class SettingsController: UIViewController {
     }
     
     func fatchUserLan (key: String){
-        let lan = FirebaseUserInfo.info.getUselanguge(user_key: key) { success in
+        FirebaseUserInfo.info.getUselanguge(user_key: key) { success in
             if let lan = success{
                 if lan.elementsEqual("spanish"){
                     self.lanSegment.selectedSegmentIndex = 2
@@ -109,7 +109,7 @@ class SettingsController: UIViewController {
     
     func fatchUserDifficulty (key: String){
         
-        let difficulty = FirebaseUserInfo.info.getUserDifficlity(user_key: key) { success in
+        FirebaseUserInfo.info.getUserDifficlity(user_key: key) { success in
             if let difficulty = success{
                 if difficulty.elementsEqual("easy"){
                     self.easySwitchIsOn ()
@@ -143,31 +143,36 @@ class SettingsController: UIViewController {
     }
     
     
-       func switchChanged(key: String, difficulty: String ) {
-      
-           if difficulty.elementsEqual("easy"){
-               easySwitchIsOn()
-           } else if difficulty.elementsEqual("mid"){
-               midSwitchIsOn()
-           }else{
-               proSwithIsOn()
-           }
-           updateUserDifficulty (key: key, diff:difficulty)
-
+    func switchChanged(key: String, difficulty: String ) {
+        
+        if difficulty.elementsEqual("easy"){
+            easySwitchIsOn()
+        } else if difficulty.elementsEqual("mid"){
+            midSwitchIsOn()
+        }else{
+            proSwithIsOn()
         }
-      
+        updateUserDifficulty (key: key, diff:difficulty)
+        
+    }
+    
     
     
     func updateUserDifficulty (key: String, diff: String){
         FirebaseUserSettingsManager.update.updateDifficulty(key: key, updateDifTo: diff) { success in
             if success {
                 print("Difficulty successfully updated to \(diff)")
+                UserDefaults.standard.set(diff, forKey: "user_difficulty")
+                if let diffUpdate = UserDefaults.standard.string(forKey: "user_difficulty"){
+                    print("user_difficulty = \(diffUpdate)")
+                }
             } else {
                 print("Failed to update difficulty")
             }
         }
+
     }
-   
+    
     @IBAction func segmentChangedByUser(_ sender: Any)  {
         var lan = ""
         if (sender as AnyObject).selectedSegmentIndex == 0{
@@ -185,9 +190,15 @@ class SettingsController: UIViewController {
         FirebaseUserSettingsManager.update.updateLanguage(key: key, updateLanTo: lan) { success in
             if success {
                 print("Difficulty successfully updated to \(lan)")
+                UserDefaults.standard.set(lan, forKey: "user_language")
+                
+                if let lanUpdate = UserDefaults.standard.string(forKey: "user_language"){
+                    print("user_difficulty = \(lanUpdate)")
+                }
+
             }else{
                 print("Failed to update language")
-
+                
             }
             
         }
