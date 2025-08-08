@@ -852,7 +852,7 @@
                                             <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="fIH-0j-1EV" kind="show" id="7fR-ad-qrm"/>
+                                            <action selector="startGameButtonTapped:" destination="Lq0-T6-6nJ" eventType="touchUpInside" id="mRt-Ts-Tw7"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="TAj-03-W7Z">

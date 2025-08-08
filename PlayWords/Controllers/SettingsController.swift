@@ -159,7 +159,7 @@ class SettingsController: UIViewController {
     
     
     func updateUserDifficulty (key: String, diff: String){
-        FirebaseUserSettingsManager.update.updateDifficulty(key: key, updateDifTo: diff) { success in
+        FirebaseUpdateUserInfo.update.updateDifficulty(key: key, updateDifTo: diff) { success in
             if success {
                 print("Difficulty successfully updated to \(diff)")
                 UserDefaults.standard.set(diff, forKey: "user_difficulty")
@@ -187,7 +187,7 @@ class SettingsController: UIViewController {
     }
     
     func updateUserLanguage (key: String, lan: String ) {
-        FirebaseUserSettingsManager.update.updateLanguage(key: key, updateLanTo: lan) { success in
+        FirebaseUpdateUserInfo.update.updateLanguage(key: key, updateLanTo: lan) { success in
             if success {
                 print("Difficulty successfully updated to \(lan)")
                 UserDefaults.standard.set(lan, forKey: "user_language")

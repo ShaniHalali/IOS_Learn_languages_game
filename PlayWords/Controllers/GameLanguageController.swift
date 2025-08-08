@@ -17,34 +17,40 @@ class GameLanguageController: UIViewController {
     var currentExpectedAnswer: Bool = false
     var userLife = 3
     var currentScore = 0
-
+    var userLanguage: String?
+    var userDifficulty: String?
+    var user_key: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if UserDefaults.standard.string(forKey: "user_key") != nil {
-            if let userLanguage = UserDefaults.standard.string(forKey: "user_language"){
-                print("user_difficulty = \(userLanguage)")
+            
+            user_key = UserDefaults.standard.string(forKey: "user_key")
+            
+            userLanguage = UserDefaults.standard.string(forKey: "user_language")
+            print("user_difficulty = \(userLanguage!)")
+            
+            userDifficulty = UserDefaults.standard.string(forKey: "user_difficulty")
+            print("user_difficulty = \(userDifficulty!)")
+            
+            
+            getQuestion(language: userLanguage!, difficulty: userDifficulty!)
+            
+            
+        }
+    }
+    
+    // MARK: - functions
+    func getQuestion(language: String, difficulty: String){
+        FirebaseWordsManager.shared.generateTranslationQuestion(language: language, difficulty: difficulty){question in
+            if let question = question  {
+                self.setQuestionCard(foreignWord: question.foreignWord, translation: question.shownTranslation, answer: question.isCorrect)
                 
-                if let userDifficulty = UserDefaults.standard.string(forKey: "user_difficulty") {
-                    print("user_difficulty = \(userDifficulty)")
-                    
-                    
-                    FirebaseWordsManager.shared.generateTranslationQuestion(language: userLanguage, difficulty: userDifficulty){question in
-                        if let question = question  {
-                            self.setQuestionCard(foreignWord: question.foreignWord, translation: question.shownTranslation, answer: question.isCorrect)
-                            
-                        }
-                    }
-                }
             }
-           
-            
-            
-            
         }
         
     }
     
-    // MARK: - end of
     
     func setQuestionCard(foreignWord: String, translation: String, answer: Bool ) {
         
@@ -61,11 +67,17 @@ class GameLanguageController: UIViewController {
             currentScore += 10
             scoreLable.text = "Score: \(currentScore)"
             print("✅ Correct answer")
+            
         }else{
             print("❌ Wrong answer")
             userLife -= 1
             checkUserLife(userLife: userLife)
         }
+        
+        // move to the next question
+        getQuestion(language: userLanguage!, difficulty: userDifficulty!)
+        
+        
     }
     
     func  checkUserLife(userLife: Int){
@@ -75,6 +87,9 @@ class GameLanguageController: UIViewController {
             lifeLable.text = "❤️"
         }else{
             lifeLable.text = "Game over"
+            endGameAndSaveTotalUserScore()
+            
+            
         }
     }
     
@@ -86,9 +101,28 @@ class GameLanguageController: UIViewController {
     
     @IBAction func wrongButtonTapped(_ sender: Any) {
         print("user tapped = false")
-
+        
         checkAnswer(userAnswer: false)
+        
+    }
+    
+    func endGameAndSaveTotalUserScore(){
+        
+        // MARK: - update total score in firebase
+        FirebaseUpdateUserInfo.update.addScore(userKey: user_key!, pointsToAdd: currentScore){ success, updareScore in
+            if success, let score = updareScore {
+                print("new score is = \(score)")
+                self.dismiss(animated: true)
 
+            }else{
+                print("Failed to update score")
+                
+            }
+        }
+        
     }
     
 }
+        
+    
+
