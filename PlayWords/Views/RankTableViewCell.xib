@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,10 +39,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.88571491179999995" blue="0.81489954210000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="cellTabelViewColor"/>
                     </stackView>
                 </subviews>
-                <color key="backgroundColor" red="0.98505908249999996" green="0.81636756659999998" blue="0.34509742259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" name="tabelViewColor"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="glI-FT-TL1" secondAttribute="bottom" constant="8" id="9S7-gn-Via"/>
                     <constraint firstAttribute="trailing" secondItem="glI-FT-TL1" secondAttribute="trailing" id="KHG-Xv-FrW"/>
@@ -58,4 +59,12 @@
             <point key="canvasLocation" x="132.82442748091603" y="-2.4647887323943665"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <namedColor name="cellTabelViewColor">
+            <color red="1" green="0.88571491179999995" blue="0.81489954210000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="tabelViewColor">
+            <color red="0.98505908249999996" green="0.81636756659999998" blue="0.34509742259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
