@@ -167,11 +167,34 @@
                                             </mask>
                                         </variation>
                                     </stackView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="H0z-T9-ZmA">
+                                    <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="H0z-T9-ZmA">
                                         <rect key="frame" x="0.0" y="215" width="786" height="112"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" red="0.98505908249999996" green="0.81636756659999998" blue="0.34509742259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="361" id="Pj4-CZ-H2Q"/>
+                                            <constraint firstAttribute="height" constant="112" id="vhx-Tw-sPD">
+                                                <variation key="heightClass=compact-widthClass=regular" constant="112"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Pj4-CZ-H2Q"/>
+                                                <exclude reference="vhx-Tw-sPD"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="vhx-Tw-sPD"/>
+                                            </mask>
+                                        </variation>
                                     </tableView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="H0z-T9-ZmA" secondAttribute="bottom" id="4Qa-HR-p12"/>
+                                    <constraint firstAttribute="trailing" secondItem="H0z-T9-ZmA" secondAttribute="trailing" id="TDe-OF-AqC"/>
+                                    <constraint firstItem="H0z-T9-ZmA" firstAttribute="top" secondItem="feT-YG-MhX" secondAttribute="bottom" id="jg7-k7-Hlj"/>
+                                    <constraint firstItem="H0z-T9-ZmA" firstAttribute="leading" secondItem="yq4-hB-ueZ" secondAttribute="leading" id="pCP-8f-Qd0"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Md3-t0-Eqw"/>
@@ -206,6 +229,7 @@
                     <tabBarItem key="tabBarItem" title="Review" image="trophy.fill" catalog="system" id="URe-CH-4an"/>
                     <connections>
                         <outlet property="scoreLabel" destination="In0-aP-Ef6" id="SPq-ES-38j"/>
+                        <outlet property="tableView" destination="H0z-T9-ZmA" id="JMd-Ll-qgs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p0O-HT-gdZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -255,12 +279,19 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eG-Nh-POg">
                                         <rect key="frame" x="0.0" y="150" width="552" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="552" id="5rC-I1-qaj"/>
+                                            <constraint firstAttribute="width" constant="552" id="5rC-I1-qaj">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="293"/>
+                                            </constraint>
                                             <constraint firstAttribute="height" constant="40" id="d4C-Qv-QYI"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
                                         <color key="textColor" name="BlackAndWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="5rC-I1-qaj"/>
+                                            </mask>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="מילה" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRw-a1-9tz">
                                         <rect key="frame" x="0.0" y="190" width="552" height="48"/>
