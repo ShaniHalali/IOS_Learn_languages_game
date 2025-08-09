@@ -1005,7 +1005,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="W2D-u6-mpD">
-                                <rect key="frame" x="120" y="10" width="612" height="264"/>
+                                <rect key="frame" x="120" y="10" width="612" height="267"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uNl-9S-gSf">
                                         <rect key="frame" x="0.0" y="0.0" width="612" height="1"/>
@@ -1092,10 +1092,10 @@
                                         </variation>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uhJ-Yz-ZpD">
-                                        <rect key="frame" x="0.0" y="72" width="612" height="17"/>
+                                        <rect key="frame" x="0.0" y="72" width="612" height="15"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="weF-iq-8HH">
-                                                <variation key="heightClass=compact-widthClass=regular" constant="17"/>
+                                                <variation key="heightClass=compact-widthClass=regular" constant="15"/>
                                             </constraint>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
@@ -1108,10 +1108,10 @@
                                         </variation>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="czD-Rx-GyX">
-                                        <rect key="frame" x="0.0" y="89" width="612" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="87" width="612" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="height" id="LFs-1k-pdM">
-                                                <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
                                             </constraint>
                                         </constraints>
                                         <variation key="heightClass=regular-widthClass=compact">
@@ -1121,10 +1121,10 @@
                                         </variation>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GeC-5a-CEv">
-                                        <rect key="frame" x="0.0" y="89" width="612" height="105"/>
+                                        <rect key="frame" x="0.0" y="87" width="612" height="110"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="88f-b6-lIM">
-                                                <rect key="frame" x="0.0" y="0.0" width="296" height="105"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="296" height="110"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xr5-xW-dgy">
                                                         <rect key="frame" x="0.0" y="0.0" width="296" height="30"/>
@@ -1136,16 +1136,20 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bVs-WR-hYC">
-                                                        <rect key="frame" x="0.0" y="30" width="296" height="20"/>
+                                                        <rect key="frame" x="0.0" y="30" width="296" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="Sob-Xv-y5Y">
-                                                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                                                                <variation key="heightClass=compact-widthClass=regular" constant="25"/>
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
                                                             </constraint>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <variation key="heightClass=compact-widthClass=regular">
-                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <mask key="constraints">
+                                                                <include reference="Sob-Xv-y5Y"/>
+                                                            </mask>
                                                         </variation>
                                                         <variation key="heightClass=regular-widthClass=compact">
                                                             <mask key="constraints">
@@ -1154,7 +1158,7 @@
                                                         </variation>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yX6-CH-Kex">
-                                                        <rect key="frame" x="0.0" y="50" width="296" height="25"/>
+                                                        <rect key="frame" x="0.0" y="55" width="296" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="odT-74-Kvu"/>
                                                         </constraints>
@@ -1163,7 +1167,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bit-xp-Ylz">
-                                                        <rect key="frame" x="0.0" y="75" width="296" height="31"/>
+                                                        <rect key="frame" x="0.0" y="80" width="296" height="31"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="Tbq-Vx-w2u">
                                                                 <variation key="heightClass=regular-widthClass=compact" constant="30"/>
@@ -1183,7 +1187,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="91e-1s-jgM">
-                                                <rect key="frame" x="316" y="0.0" width="296" height="105"/>
+                                                <rect key="frame" x="316" y="0.0" width="296" height="110"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bjm-Vx-Mvx">
                                                         <rect key="frame" x="0.0" y="0.0" width="296" height="30"/>
@@ -1195,23 +1199,29 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bzy-Zu-6et">
-                                                        <rect key="frame" x="0.0" y="30" width="296" height="20"/>
+                                                        <rect key="frame" x="0.0" y="30" width="296" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="FjY-2D-wej">
-                                                                <variation key="heightClass=compact-widthClass=regular" constant="20"/>
+                                                                <variation key="heightClass=compact-widthClass=regular" constant="25"/>
+                                                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
                                                             </constraint>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <variation key="heightClass=compact-widthClass=regular">
-                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <mask key="constraints">
+                                                                <include reference="FjY-2D-wej"/>
+                                                            </mask>
+                                                        </variation>
+                                                        <variation key="heightClass=regular-widthClass=compact">
                                                             <mask key="constraints">
                                                                 <include reference="FjY-2D-wej"/>
                                                             </mask>
                                                         </variation>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learning Language:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmm-Kc-qdm">
-                                                        <rect key="frame" x="0.0" y="50" width="296" height="25"/>
+                                                        <rect key="frame" x="0.0" y="55" width="296" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="Ssi-cg-kRv"/>
                                                         </constraints>
@@ -1223,7 +1233,7 @@
                                                         </variation>
                                                     </label>
                                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rEj-mC-ibr">
-                                                        <rect key="frame" x="0.0" y="75" width="296" height="31"/>
+                                                        <rect key="frame" x="0.0" y="80" width="296" height="31"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="40z-GD-XTD">
                                                                 <variation key="heightClass=regular-widthClass=compact" constant="30"/>
@@ -1244,11 +1254,11 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="56D-A7-5pL">
-                                        <rect key="frame" x="0.0" y="194" width="612" height="30"/>
+                                        <rect key="frame" x="0.0" y="197" width="612" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="hQl-99-Hd7">
                                                 <variation key="heightClass=compact-widthClass=regular" constant="30"/>
-                                                <variation key="heightClass=regular-widthClass=compact" constant="50"/>
+                                                <variation key="heightClass=regular-widthClass=compact" constant="40"/>
                                             </constraint>
                                         </constraints>
                                         <variation key="default">
@@ -1268,7 +1278,7 @@
                                         </variation>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="dqw-rw-UqI">
-                                        <rect key="frame" x="0.0" y="224" width="612" height="40"/>
+                                        <rect key="frame" x="0.0" y="227" width="612" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9Y-8l-O5z">
                                                 <rect key="frame" x="0.0" y="0.0" width="206" height="40"/>
@@ -1305,7 +1315,7 @@
                                         <variation key="heightClass=regular-widthClass=compact" spacing="50"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RMw-eq-9bs">
-                                        <rect key="frame" x="0.0" y="264" width="612" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="267" width="612" height="0.0"/>
                                         <constraints>
                                             <constraint firstAttribute="height" id="BVP-ki-A4A">
                                                 <variation key="heightClass=regular-widthClass=compact" constant="80"/>
@@ -1486,7 +1496,7 @@
                                                 <variation key="heightClass=compact-widthClass=regular" constant="30"/>
                                             </constraint>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <variation key="heightClass=compact-widthClass=regular">
                                             <fontDescription key="fontDescription" type="system" pointSize="27"/>
