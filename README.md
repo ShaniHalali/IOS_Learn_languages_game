@@ -5,6 +5,11 @@ Players can challenge themselves by translating words across different difficult
 
 ---
 
+
+https://github.com/user-attachments/assets/94a203cc-a26d-407e-9a89-36df781d150e
+
+
+---
 ## 📱 Features
 
 - **Multiple Languages:** Play in English or Spanish - translations are provided in Hebrew.
@@ -13,6 +18,8 @@ Players can challenge themselves by translating words across different difficult
 - **User Profiles:** Sign up or log in to save progress and personalize gameplay.
 - **Score Tracking:** Total scores are stored in Firebase and displayed in a leaderboard.
 -  **Leaderboard TableView:** Displays users’ scores in a ranked list with custom cells.
+- **Full Orientation Support:** All screens are supported in both portrait and landscape mode.
+- **Dark Mode Support:** UI fully adapts to system dark mode settings.
 - **Responsive UI:** Clean and intuitive design for a smooth user experience.
 
 ---
@@ -32,26 +39,6 @@ The app follows the **MVC (Model-View-Controller)** architecture and uses:
 
 ---
 
-## 🚀 Getting Started
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/YourUsername/words-play-ios.git
-   cd words-play-ios
-``
-### Install dependencies:
-- Open the `.xcodeproj` or `.xcworkspace` file in **Xcode**.
-- Make sure you have CocoaPods installed (if used).
-- Run the project on the simulator or a physical device.
-
-### Firebase Setup:
-- Create a Firebase project.
-- Add your iOS app in the Firebase console.
-- Download the `GoogleService-Info.plist` file and add it to your Xcode project.
-- Enable **Firebase Realtime Database** and configure rules.
-
----
-
 ## 🎮 How to Play
 
 1. Choose your **language** and **difficulty level**.
@@ -63,7 +50,33 @@ The app follows the **MVC (Model-View-Controller)** architecture and uses:
 5. Earn 10 points for correct answers.
 6. The round ends when all lives are lost.
 7. Compete for the top spot on the **leaderboard**.
+<img width="2556" height="1179" alt="Simulator Screen Shot - iPhone 14 Pro - 2025-08-09 at 20 35 08" src="" />
+
+---
+## Vertically – dark Mode
+<img width="25%" height="20%" alt="image" src="https://github.com/user-attachments/assets/1bfcecba-eed4-4c8f-bb10-211e247f4586" />
+<img width="25%" height="20%" alt="image" src="https://github.com/user-attachments/assets/21a78854-06fa-40c3-a6cf-6ab1ee8cc7ac" />
+<img width="25%" height="20%" alt="image" src="https://github.com/user-attachments/assets/1f4a10a1-432d-4e38-b1c1-5fbde2421855" />
+<img width="25%" height="20%" alt="image" src="https://github.com/user-attachments/assets/09b94071-59c3-430e-aa8a-b3d4c6cf326e" />
+<img width="25%" height="20%" alt="image" src="https://github.com/user-attachments/assets/db82d623-a828-42da-aea1-0d355b35198a" />
+<img width="25%" height="20%" alt="image" src="https://github.com/user-attachments/assets/94f4d30b-587c-431a-b4d6-34051ac9532f" />
+
+
+## Horizontally – Light Mode
+<img width="35%" height="30%" alt="image" src="https://github.com/user-attachments/assets/5cc4e169-2d39-4894-99ec-3490450a9c4b" />
+<img width="35%" height="30%" alt="image" src="https://github.com/user-attachments/assets/fe42720d-d1d2-4f15-95bf-ebd2da656b46" />
+<img width="35%" height="30%" alt="image" src="https://github.com/user-attachments/assets/08f660a9-f52c-4a26-bdf2-ca04b59819e7" />
+<img width="35%" height="30%" alt="image" src="https://github.com/user-attachments/assets/added70a-f717-40e9-969d-defc043b5252" />
+<img width="35%" height="30%" alt="image" src="https://github.com/user-attachments/assets/007ffcfd-a44f-4ca6-88e3-b912e0bd6e9e" />
+
+
 
 
 ---
+## 📄 License
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+## 👩‍💻 Developed By
+**Shani Halali** - junior iOS Developer · Passionate about clean code, cinematic design, and building amazing user experiences
+
 
