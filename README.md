@@ -69,6 +69,11 @@ The app follows the **MVC (Model-View-Controller)** architecture and uses:
 <img width="35%" height="30%" alt="image" src="https://github.com/user-attachments/assets/added70a-f717-40e9-969d-defc043b5252" />
 <img width="35%" height="30%" alt="image" src="https://github.com/user-attachments/assets/007ffcfd-a44f-4ca6-88e3-b912e0bd6e9e" />
 
+## From User Settings to Gameplay – Firebase Realtime in Action with Live Score Updates and Auto UI Refresh
+
+
+https://github.com/user-attachments/assets/579cc127-dc65-4d13-bc03-11f35a6e9b87
+
 
 
 
