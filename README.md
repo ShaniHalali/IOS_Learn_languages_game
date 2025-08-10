@@ -50,7 +50,6 @@ The app follows the **MVC (Model-View-Controller)** architecture and uses:
 5. Earn 10 points for correct answers.
 6. The round ends when all lives are lost.
 7. Compete for the top spot on the **leaderboard**.
-<img width="2556" height="1179" alt="Simulator Screen Shot - iPhone 14 Pro - 2025-08-09 at 20 35 08" src="" />
 
 ---
 ## Vertically – dark Mode
